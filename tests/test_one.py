@@ -10,9 +10,7 @@ def test_valid_search(driver):
     search_field.send_keys('warhammer 40000 blood angels' + Keys.RETURN)
     wiki_link = WebDriverWait(driver, 10).until(
         EC.visibility_of_element_located(
-            (By.XPATH, "//a[contains(., 'Blood Angels - Warhammer 40k Wiki')]")
-        )
-    )
+            (By.XPATH, "//a[contains(., 'Blood Angels - Warhammer 40k Wiki')]")))
     assert wiki_link.is_displayed()
 
 
